@@ -1,0 +1,78 @@
+.sidebar {
+  width: 300px;
+  padding: 20px;
+  background-image: linear-gradient(147deg, #25828a, #9ee4e9,#a5e0e4,#25828a,#25828a); /* Dark background for navbar */
+  color: white;
+  border-right: 1px solid #ddd;
+
+  .sidebar-header {
+    h3 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      color: white;
+    }
+  }
+
+  .group {
+    position: relative;
+    margin-bottom: 20px;
+
+    .icon {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #888;
+    }
+
+    .input {
+      width: 200px;
+      padding: 10px 40px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+  }
+
+  .category-filter {
+    margin-bottom: 20px;
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .price-filter {
+    margin-bottom: 20px;
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+      font-size: 1rem;
+    }
+
+    input[type="number"] {
+      width: 100px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    input[type="number"]::placeholder {
+      color: #aaa;
+    }
+  }
+}

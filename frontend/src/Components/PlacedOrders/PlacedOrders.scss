@@ -1,0 +1,166 @@
+// Color Palette
+$primary-color: #00796b;
+$secondary-color: #004d40;
+$accent-color: #ff7043;
+$background-color: #f4f4f4;
+$card-background: #ffffff;
+$text-color: #333;
+$border-color: #e0e0e0;
+$hover-bg-color: #e8f5e9;
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+// Typography
+$font-family: 'Roboto', sans-serif;
+$heading-font: 'Montserrat', sans-serif;
+.PlacedOrders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: start;
+  padding: 40px 20px;
+  transition: all 0.3s ease-in-out;
+  height: 100vh;
+  background-image: linear-gradient(147deg, #c6e7ea, #9ee4e9, #25828a,#25828a,); 
+.product-card {
+  
+  background-color: $card-background;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  height: 420px;
+  width: 300px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  // Product Image
+
+    .image-gallery {
+      width: 100%;
+      height: 60%;
+      .product-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: opacity 0.3s ease;
+      }
+
+    }
+
+  // Bottom Section (Product Info & Sizes)
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    height: 20%;
+    .left {
+      padding: 15px ;
+      padding-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .product-info {
+        font-size: 16px;
+        color: $text-color;
+        .product-name {
+          font-size: 18px;
+          font-weight: 600;
+          color: $primary-color;
+          margin-bottom: 8px;
+          text-transform: capitalize;
+        }
+
+        .product-price {
+          font-size: 20px;
+          font-weight: bold;
+          color: #25828a;
+        }
+
+        .product-category {
+          color:#25828a;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    // Button Styling
+    .edit-btn {
+        width: 50%;
+      margin-left: 15px;
+      background-color: #25828a;    // Light Green for background
+      color: white;                 // White text for contrast
+      border: none;
+      padding: 12px ;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;    
+      transition: background-color 0.3s ease;
+      text-decoration: none;        // Remove underline in Link component
+
+      &:hover {
+        background-color:#82c1c7 ;
+      }
+
+      &:active {
+        background-color: #010757;  
+      }
+    }
+
+  }
+}
+
+}
+
+// Empty State Text
+.no-products {
+  text-align: center;
+  font-size: 18px;
+  color: $text-color;
+  opacity: 0.6;
+  margin-top: 30px;
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .products-container {
+    padding: 20px 10px;
+  }
+
+  .product-card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-container {
+    padding: 20px 15px;
+  }
+
+  .product-card {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-container {
+    padding: 15px;
+  }
+
+  .product-card {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .product-info .product-name {
+    font-size: 16px;
+  }
+
+  .product-info .product-price {
+    font-size: 18px;
+  }
+
+  .product-info .product-category {
+    font-size: 12px;
+  }
+}

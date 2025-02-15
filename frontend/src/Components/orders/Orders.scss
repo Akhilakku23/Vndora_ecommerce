@@ -1,0 +1,173 @@
+// Color Palette
+$primary-color: #000e79;
+$secondary-color: #140ec0;
+$accent-color: #ff7043;
+$background-color: #f4f4f4;
+$card-background: #ffffff;
+$text-color: #333;
+$border-color: #e0e0e0;
+$hover-bg-color: #e8f5e9;
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+// Orders Container
+.Orders {
+  padding-top: 20px; // Increase padding-top to match the header size
+  height: 100vh;
+  background-image: linear-gradient(147deg, #c6e7ea, #9ee4e9, #25828a,#25828a,); 
+  // Add background for the heading
+  .orders-heading {
+    top: 10%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;  // Increase font size to make the heading bigger
+    color: white;
+    font-weight: bold;
+  }
+
+  .orders-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: start;
+    padding: 40px 20px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .order-card {
+    width: 190px;
+    height: 254px;
+    background: $card-background;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-size: 30px;
+    font-weight: 900;
+    transition: all 0.4s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    // First content (order image)
+    .first-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      transition: all 0.4s;
+      background-color: $primary-color;
+
+      .order-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    // Second content (order details)
+    .second-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: all 0.4s;
+      background-color: $secondary-color;
+      color: white;
+      transform: rotate(90deg);
+      font-size: 1.8rem;
+
+      .order-name {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+        text-transform: capitalize;
+      }
+
+      .order-status {
+        text-align: center;
+        font-size: 16px;
+        color: white;
+        margin-top: 5px;
+      }
+    }
+
+    // Hover effect
+    &:hover {
+      transform: scale(1.1);
+      border-radius: 15px;
+      cursor: pointer;
+      background: $hover-bg-color;
+
+      .second-content {
+        opacity: 0.8;
+        height: 100%;
+        font-size: 1.8rem;
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+// Empty State Text
+.no-orders {
+  text-align: center;
+  font-size: 18px;
+  color: $text-color;
+  opacity: 0.6;
+  margin-top: 30px;
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .orders-container {
+    padding: 20px 10px;
+  }
+
+  .order-card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .orders-container {
+    padding: 20px 15px;
+  }
+
+  .order-card {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .orders-container {
+    padding: 15px;
+  }
+
+  .order-card {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .order-info .order-name {
+    font-size: 16px;
+  }
+}

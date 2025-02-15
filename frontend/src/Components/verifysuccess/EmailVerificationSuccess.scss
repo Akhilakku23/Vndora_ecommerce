@@ -1,0 +1,57 @@
+$email-success-bg: #e1e9f7; // Light green background
+$email-text-color: #152998; // Dark green for text
+$button-bg: #508aff; // Orange button color (default)
+$button-hover-bg: #005eff; // Darker orange for button hover
+
+.email-verification-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(147deg, #c6e7ea, #9ee4e9, #25828a,#25828a,); 
+  .success-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    color: $email-text-color;
+    font-family: 'Arial', sans-serif;
+
+    .checkmark-icon {
+      font-size: 60px;
+      color: #25828a;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #25828a;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .login-button {
+      padding: 12px 24px;
+      background-color: #25828a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $button-hover-bg;
+      }
+    }
+  }
+}
