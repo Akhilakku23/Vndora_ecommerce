@@ -42,7 +42,7 @@ const Login = () => {
     <div className="login-container">
       <div className="login-box">
         <div className="title">
-        <span className="highlight">Trendfactory</span>
+        <span className="highlight">Vandora</span>
         </div>
         <div className="tagline">Log in to your account</div>
 

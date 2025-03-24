@@ -33,7 +33,7 @@ const Email = () => {
       <div className="email-box">
         <div className="logo">
           <img src="/images/logo.jpg" alt="Logo" />
-          <h2>Trendfactory</h2>
+          <h2>Vandora</h2>
         </div>
         <h2>Sign up</h2>
         <p className="tagline">Please enter your email address to confirm signup.</p>

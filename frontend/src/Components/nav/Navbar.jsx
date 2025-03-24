@@ -34,7 +34,7 @@ const Navbar = ({ username, role, loggedIn ,setLoggedIn}) => {
       <div className="navbar-logo">
         <Link to={'/'}>
           <img src="/images/logo.jpg" alt="Logo" className="logo-image" />
-          <span className="website-name">Trendfactory</span>
+          <span className="website-name">Vandora</span>
         </Link>
       </div>
 
