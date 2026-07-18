@@ -16,6 +16,7 @@ const Company = ({setUsername, setRole, setLoggedIn }) => {
   });
   const [categories, setCategories] = useState([]);
   const [isEditable, setIsEditable] = useState(false);
+ 
   
   useEffect(() => {
     getEssentials();

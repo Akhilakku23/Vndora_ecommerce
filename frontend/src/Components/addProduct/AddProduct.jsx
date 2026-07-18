@@ -3,6 +3,7 @@ import axios from 'axios';
 import route from '../route';
 import './AddProduct.scss';
 import { useNavigate } from 'react-router-dom';
+import cart from '../cart/Cart'
 
 const AddProduct = ({ setUsername, setRole, setLoggedIn }) => {
   const navigate = useNavigate();
